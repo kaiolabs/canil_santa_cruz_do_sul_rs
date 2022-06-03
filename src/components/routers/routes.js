@@ -53,17 +53,9 @@ const Rotas = () => (
                 </PrivateRoute>
             }/>
 
-            <Route path="/c8188d50-7e7e-44d5-81fa-6d666563eff3" element={
-                <PrivateRoute>
-                   <CadastraONG/>
-                </PrivateRoute>
-            }/>
+            <Route path="/c8188d50-7e7e-44d5-81fa-6d666563eff3" element={<CadastraONG/>}/>
 
-            <Route path="/9018cb68-66e3-4fdd-bf90-bfb54d52b0f7" element={
-                <PrivateRoute>
-                   <CadastraProtetorIndependente/>
-                </PrivateRoute>
-            }/>
+            <Route path="/9018cb68-66e3-4fdd-bf90-bfb54d52b0f7" element={<CadastraProtetorIndependente/>}/>
 
             <Route path="/e6851794-1cff-4aea-a1b6-5686a6f2afb6" element={
                 <PrivateRoute>
