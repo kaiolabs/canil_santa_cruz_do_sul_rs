@@ -1,0 +1,19 @@
+.bnt{
+    width: 280px;
+    height: 55px;
+    border-radius: 10px;
+    border: none;
+    background-color: #834a1c;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 30px 0px 0px 0px;
+    font-family: 'Sarala', sans-serif;
+    letter-spacing: 0.05rem;
+    margin: 15px 30px 15px 0px;
+}
+
+.title{
+    text-decoration: none;
+    color: #ffffff;
+}

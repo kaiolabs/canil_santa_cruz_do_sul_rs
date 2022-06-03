@@ -1,0 +1,113 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+
+.card{
+    width: 30%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3%;
+}
+
+.logo{
+    width: 280px;
+    height: 280px;
+}
+
+.form{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form h1{
+    font-family: 'Righteous', cursive;
+    line-height: 60%;
+    font-size: 2.5rem;
+    letter-spacing: 0.15rem;
+    color: #834a1c;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.form form input{
+    width: 110%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    padding: 0 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #000000;
+    background-color: #d4d4d446;
+    margin: 10px;
+    border: 2px solid #834a1c;
+    transition: all 0.3s;
+    outline: none;
+    border-radius: 10px;
+}
+
+.form p a{
+    font-family: 'Sarala', sans-serif;
+}
+
+.form a{
+    text-decoration: none;
+    color: #834a1c;
+    font-size: 16px;
+    font-family: 'Sarala', sans-serif;
+}
+
+.form form input:focus{
+    border: 2px solid #834a1c;
+    transition: all 0.3s;
+    outline: none;
+
+}
+
+.form  form button{
+    width: 115%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #834a1c;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px 0px 10px 0px;
+    font-family: 'Sarala', sans-serif;
+    letter-spacing: 0.05rem;
+}
+
+@media (min-width: 50px) and (max-width: 850px){
+
+    .card{
+        width: 90%;
+        height: 80%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 20%;
+    }
+
+    .form h1{
+        margin-bottom: 40px;
+        margin-top: 50px;
+    }
+
+ }

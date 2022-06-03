@@ -1,0 +1,29 @@
+.box button{
+    position: relative;
+    padding: 4px 15px;
+    margin: 7px;
+    font-size: 1em;
+    font-weight: 600;
+    font-family: 'Sarala', sans-serif;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background: none;
+    border: none;
+}
+
+.box button::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 5px;
+    border-radius: 15px;
+    background-color: #834B1C;
+    transition: all 0.5s;
+}
+
+.box button:hover::before{
+    width: 100%;
+}
+
