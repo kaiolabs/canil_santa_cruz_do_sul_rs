@@ -1,11 +1,9 @@
 .container{
-    margin: 100px 7% 0% 7%;
+    margin: 40px 5% 0% 5%;
     display: flex;
     flex-direction: column;
 
 }
-
-
 
 .header{
     text-align: center;
@@ -18,25 +16,34 @@
 
 .conteudo{
     display: flex;
-    justify-content: start;
-    align-items: center;
+    flex-direction: column;
     flex-wrap: wrap;
-    margin-top: 2%;
 
 }
 
 .conteudo h2{
     font-family: 'Righteous', sans-serif;
-    line-height: 60%;
+    line-height: 130%;
     font-size: 1.4rem;
     letter-spacing: 0.15rem;
     color: #000000;
     margin-bottom: 20px;
+
 }
 
 .cadastro{
     margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+
+.opicoes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .conteudo button{

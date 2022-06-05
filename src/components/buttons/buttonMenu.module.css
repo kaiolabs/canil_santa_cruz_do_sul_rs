@@ -1,5 +1,5 @@
-.bnt{
-    width: 280px;
+.box button{
+    width: 320px;
     height: 55px;
     border-radius: 10px;
     border: none;
@@ -11,9 +11,6 @@
     font-family: 'Sarala', sans-serif;
     letter-spacing: 0.05rem;
     margin: 15px 30px 15px 0px;
+    color: #fff;
 }
 
-.title{
-    text-decoration: none;
-    color: #ffffff;
-}
