@@ -13,7 +13,7 @@ export default function ProtetoresIndependentes () {
 
     const getProtetores = async () => {
         const { data: Organizacao, error } = await supabase
-            .from('Organizacao')
+            .from('Protetor')
             .select('*')
             setProtetores(Organizacao)
             setCopyProtetores(Organizacao)
@@ -59,19 +59,19 @@ export default function ProtetoresIndependentes () {
 
 
                         />
-                        <button 
-                            className={styles.botaoDeBusca}
-                            onClick={buscaProtetores}
-                        >Buscar</button>
-                        <button 
-                            className={styles.botaoDeBusca}
-                            onClick={handleReload}
-                        >Recarregar</button>
+                        <div className={styles.buttons}>
+                            <button 
+                                className={styles.botaoDeBusca}
+                                onClick={buscaProtetores}
+                            >Buscar</button>
+                            <button 
+                                className={styles.botaoDeBusca}
+                                onClick={handleReload}
+                            >Recarregar</button>
+                        </div>
                     </div>
                     <div className={styles.cards}>
-                        {copyProtetores.length > 0 && copyProtetores.map(protetor => <CardDeInformacoes key={protetor.id} {...protetor}/>)}
-                        
-                        
+                        {copyProtetores.length > 0 && copyProtetores.map(protetor => <CardDeInformacoes key={protetor.id} {...protetor}/>)}        
                         {copyProtetores.length === 0 && <h1 className={styles.notValue}>Nenhum protetor independente encontrado</h1>}
                     </div>
                 </div>

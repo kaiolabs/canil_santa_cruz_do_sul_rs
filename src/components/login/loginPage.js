@@ -4,7 +4,7 @@ import img from '../../images/logo2.png'
 import { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { supabase } from '../server/supabase.js'
+import { supabaseAuthentication } from '../server/supabase_authentication'
 
 
 export default function LoginPage() {
@@ -15,12 +15,10 @@ export default function LoginPage() {
 
     const handleEmailChange = (e) => {
         setEmail(e.target.value)
-        console.log(email)
     }
 
     const handlePasswordChange = (e) => {
         setPassword(e.target.value)
-        console.log(password)
     }
 
     const messengerError = () => {
@@ -60,7 +58,7 @@ export default function LoginPage() {
             messengerError()
         } else {
             
-            let { user, error } = await supabase.auth.signIn({
+            let { user, error } = await supabaseAuthentication.auth.signIn({
                 email: email,
                 password: password
             })
@@ -115,6 +113,7 @@ export default function LoginPage() {
                                 placeholder="Senha"
                                 value={password}
                                 onChange={handlePasswordChange}
+                                
 
                             />
 
