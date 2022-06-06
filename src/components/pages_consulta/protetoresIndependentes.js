@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "../../components/pages_consulta/protetoresIndependentes.module.css";
-import CardDeInformacoes from "../cards/card_de_informacoes";
+import CardDeInformacoes from "../cards/card_de_informacoes.js";
 import SimplesNavbar from "../navBar/simplesNavBar";
 import { supabase } from '../server/supabase.js'
 
