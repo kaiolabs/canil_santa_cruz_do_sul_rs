@@ -4,7 +4,7 @@ import img from '../../images/logo2.png'
 import { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { supabaseAuthentication } from '../server/supabase_authentication'
+import { supabase } from '../server/supabase.js'
 
 
 export default function LoginPage() {
@@ -58,7 +58,7 @@ export default function LoginPage() {
             messengerError()
         } else {
             
-            let { user, error } = await supabaseAuthentication.auth.signIn({
+            let { user, error } = await supabase.auth.signIn({
                 email: email,
                 password: password
             })
