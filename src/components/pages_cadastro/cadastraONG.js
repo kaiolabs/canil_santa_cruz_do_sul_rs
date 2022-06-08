@@ -31,7 +31,7 @@ export default function CadastraProtetorIndependente() {
         setCnpj(e.target.value);
     }
 
-    const handleRgChange = (e) => {
+    const handleTipodaorganizacao = (e) => {
         setTipodaorganizacao(e.target.value);
     }
 
@@ -135,7 +135,7 @@ export default function CadastraProtetorIndependente() {
                 }else{
                     messengerSuccess();
                     setTimeout(() => {
-                        window.location.href = "/";
+                        window.location.href = "/5872b189-7ede-4e1d-895e-45a966e4c876";
                     }, 2000);
                 }
         }
@@ -148,7 +148,7 @@ export default function CadastraProtetorIndependente() {
                 <SimplesNavbar/>
             </div>
             <div className={styles.container}>
-            <h1 className={styles.title}>Cadastra ONG</h1>
+            <h1 className={styles.title}>Cadastra ONG/OSC</h1>
                 <form 
                 className={styles.form}
                 onSubmit={handleFormSubmit}
@@ -180,21 +180,23 @@ export default function CadastraProtetorIndependente() {
                         </div>
 
                         <div className={styles.input}>
-                            <label>Tipo da organização</label>
-                            <input 
-                                required
-                                type="text"
-                                maxLength={9}
+                        <label>Tipo da organização</label>
+                            <select 
+                                className={styles.select}
                                 value={tipodaorganizacao}
-                                onChange={handleRgChange}
-                            />
+                                onChange={handleTipodaorganizacao}
+                            >
+                                <option value="">Selecione uma opção</option>
+                                <option value="ong">ONG</option>
+                                <option value="osc">OSC</option>
+                            </select>
                         </div>
 
                     </section>
 
                     <section>
                     <div className={styles.input}>
-                            <label>A ONG possuir sede?</label>
+                            <label>A ONG/OSC possui sede?</label>
                             <select 
                                 className={styles.select}
                                 value={possuirSede}
@@ -272,6 +274,7 @@ export default function CadastraProtetorIndependente() {
                                 type="text"
                                 value={capacidade}
                                 onChange={handleCapacidadeChange}
+                                maxLength={100000}
                                 pattern="[0-9]+$"
                             />
                         </div>

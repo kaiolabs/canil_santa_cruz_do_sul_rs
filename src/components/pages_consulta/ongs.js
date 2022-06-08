@@ -6,7 +6,7 @@ import { supabase } from '../server/supabase.js'
 
 export default function Ongs() {
     const [protetores, setProtetores] = useState([]);
-    const [copyProtetores, setCopyProtetores] = useState([]);
+    const [copyOngs, setCopyOngs] = useState([]);
     const [busca, setBusca] = useState("");
 
 
@@ -15,7 +15,7 @@ export default function Ongs() {
             .from('Organizacao')
             .select('*')
             setProtetores(Organizacao)
-            setCopyProtetores(Organizacao)
+            setCopyOngs(Organizacao)
     }
 
 
@@ -31,14 +31,14 @@ export default function Ongs() {
     const handleReload = (e) => {
         e.preventDefault()
         setBusca("")
-        setCopyProtetores(protetores)
+        setCopyOngs(protetores)
     }
 
     const buscaProtetores = async(e) => {
         e.preventDefault()
 
         if(busca.length > 0){
-            setCopyProtetores(protetores.filter(protetor => protetor.nome.toLowerCase().includes(busca.toLowerCase())))
+            setCopyOngs(protetores.filter(protetor => protetor.nome.toLowerCase().includes(busca.toLowerCase())))
         }
     }
 
@@ -70,8 +70,8 @@ export default function Ongs() {
                         </div>
                     </div>
                     <div className={styles.cards}>
-                        {copyProtetores.length > 0 && copyProtetores.map(protetor => <CardDeInformacoesOngs key={protetor.id} {...protetor}/>)}        
-                        {copyProtetores.length === 0 && <h1 className={styles.notValue}>Nenhum protetor independente encontrado</h1>}
+                        {copyOngs.length > 0 && copyOngs.map(protetor => <CardDeInformacoesOngs key={protetor.id} {...protetor}/>)}        
+                        {copyOngs.length === 0 && <h1 className={styles.notValue}>Nenhum protetor independente encontrado</h1>}
                     </div>
                 </div>
             </div>
