@@ -1,6 +1,8 @@
 import styles from "./home.module.css";
 import ButtonMenu from "../buttons/buttonMenu";
 import SimplesNavbar from "../navBar/simplesNavBar";
+// import { v4 as uuidv4 } from 'uuid';
+// console.log(uuidv4())
 
 export default function HomePage(){
     return(

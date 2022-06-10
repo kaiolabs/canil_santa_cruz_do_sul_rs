@@ -21,6 +21,8 @@ export default function CadastraMembrosDaDiretoria(){
                                 type= "text"
                                 maxLength={20}
                                 minLength={11}
+                                pattern="[0-9]+$"
+                                title="Por favor informe somente os números"
                                 />
                         </div>
                         <div className={styles.input}>
@@ -28,6 +30,8 @@ export default function CadastraMembrosDaDiretoria(){
                             <input 
                                 required
                                 type="text"
+                                pattern="[0-9]+$"
+                                title="Por favor informe somente os números"
                                 maxLength={9}
                             />
                         </div>
@@ -38,6 +42,8 @@ export default function CadastraMembrosDaDiretoria(){
                             <input 
                                 required
                                 type="text"
+                                pattern="[0-9]+$"
+                                title="Por favor informe somente os números"
                             />
                         </div>
                         <div className={styles.input}>
@@ -54,6 +60,8 @@ export default function CadastraMembrosDaDiretoria(){
                                 type="tel"
                                 required
                                 minLength={11}
+                                pattern="[0-9]+$"
+                                title="Por favor informe somente os números"
                             />
                         </div>
                     </section>

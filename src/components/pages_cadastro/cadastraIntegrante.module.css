@@ -1,0 +1,112 @@
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.title{
+    text-align: center;
+    font-family: 'Righteous', sans-serif;
+    line-height: 120%;
+    font-size: 2rem;
+    letter-spacing: 0.15rem;
+    color: #834a1c;
+    margin-top: 2%;
+}
+
+.subTitle{
+    text-align: center;
+    font-family: 'Righteous', sans-serif;
+    line-height: 120%;
+    font-size: 1.1rem;
+    letter-spacing: 0.15rem;
+    color: #834a1c;
+    margin-bottom: 5%;
+}
+
+.form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.form section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+}
+
+
+.input input{
+
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #000000;
+    background-color: #d4d4d446;
+    border: 2px solid #834a1c;
+    transition: all 0.3s;
+    outline: none;
+    border-radius: 10px;
+    margin: 10px 20px 10px 20px;
+}
+
+.select{
+    width: 300px;
+    height: 45px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #000000;
+    background-color: #d4d4d446;
+    border: 2px solid #834a1c;
+    transition: all 0.3s;
+    outline: none;
+    border-radius: 10px;
+    margin: 10px 20px 10px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.input label{
+    font-family: 'Righteous', cursive;
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+    color: #000000;
+    margin: 10px 20px 40px 25px;
+}
+
+.boxBtn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.btn{
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #834a1c;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 30px 0px 0px 0px;
+    font-family: 'Sarala', sans-serif;
+    letter-spacing: 0.05rem;
+    
+
+}

@@ -175,6 +175,7 @@ export default function CadastraProtetorIndependente() {
                                 value={cnpj}
                                 onChange={handleCpfChange}
                                 pattern="[0-9]+$"
+                                title="Por favor informe somente os números"
 
                                 />
                         </div>
@@ -225,6 +226,7 @@ export default function CadastraProtetorIndependente() {
                                 value={telefone}
                                 onChange={handleTelefoneChange}
                                 pattern="[0-9]+$"
+                                title="Por favor informe somente os números"
                                 maxLength={15}
                             />
                         </div>
@@ -240,6 +242,7 @@ export default function CadastraProtetorIndependente() {
                                 value={cep}
                                 onChange={handleCepChange}
                                 pattern="[0-9]+$"
+                                title="Por favor informe somente os números"
                                 maxLength={10}
                             />
                         </div>
@@ -260,6 +263,7 @@ export default function CadastraProtetorIndependente() {
                                 value={numeroAbrigo}
                                 onChange={handleNumeroAbrigoChange}
                                 pattern="[0-9]+$"
+                                title="Por favor informe somente os números"
                                 maxLength={7}
                             />
                         </div>
@@ -276,6 +280,7 @@ export default function CadastraProtetorIndependente() {
                                 onChange={handleCapacidadeChange}
                                 maxLength={100000}
                                 pattern="[0-9]+$"
+                                title="Por favor informe somente os números"
                             />
                         </div>
 

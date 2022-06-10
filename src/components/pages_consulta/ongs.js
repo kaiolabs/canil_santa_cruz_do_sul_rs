@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "../../components/pages_consulta/ongs.module.css";
-import CardDeInformacoesOngs from "../cards/card_de_informacoes_ongs";
+import CardDeInformacoesOngOsc from "../cards/cardDeInformacoesOngsOsc";
 import SimplesNavbar from "../navBar/simplesNavBar";
 import { supabase } from '../server/supabase.js'
 
@@ -46,7 +46,7 @@ export default function Ongs() {
         <div>
             <SimplesNavbar/>
             <div>
-                <h1 className={styles.title}>Protetores independentes</h1>
+                <h1 className={styles.title}>ONGs OSCs</h1>
                 <div className={styles.container}>
                     <div className={styles.busca}>
                         <input 
@@ -70,7 +70,7 @@ export default function Ongs() {
                         </div>
                     </div>
                     <div className={styles.cards}>
-                        {copyOngs.length > 0 && copyOngs.map(protetor => <CardDeInformacoesOngs key={protetor.id} {...protetor}/>)}        
+                        {copyOngs.length > 0 && copyOngs.map(protetor => <CardDeInformacoesOngOsc key={protetor.id} {...protetor}/>)}        
                         {copyOngs.length === 0 && <h1 className={styles.notValue}>Nenhum protetor independente encontrado</h1>}
                     </div>
                 </div>

@@ -31,6 +31,17 @@
     margin-bottom: 20px;
 }
 
+.btnBox{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+
 @media (min-width: 50px) and (max-width: 850px){
     .card{
         background-color: #fff;

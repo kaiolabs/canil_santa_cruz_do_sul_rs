@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "../../components/pages_consulta/protetoresIndependentes.module.css";
-import CardDeInformacoes from "../cards/card_de_informacoes.js";
+import CardDeInformacoesIntegrantes from "../cards/cardDeInformacoesIntegrantes.js";
 import SimplesNavbar from "../navBar/simplesNavBar";
 import { supabase } from '../server/supabase.js'
 
@@ -71,7 +71,7 @@ export default function ProtetoresIndependentes () {
                         </div>
                     </div>
                     <div className={styles.cards}>
-                        {copyProtetores.length > 0 && copyProtetores.map(protetor => <CardDeInformacoes key={protetor.id} {...protetor}/>)}        
+                        {copyProtetores.length > 0 && copyProtetores.map(protetor => <CardDeInformacoesIntegrantes key={protetor.id} {...protetor}/>)}        
                         {copyProtetores.length === 0 && <h1 className={styles.notValue}>Nenhum protetor independente encontrado</h1>}
                     </div>
                 </div>

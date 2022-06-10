@@ -176,7 +176,7 @@ export default function CadastraProtetorIndependente() {
                                 value={cpf}
                                 onChange={handleCpfChange}
                                 pattern="[0-9]+$"
-                                title="Por favor inform somente os números"
+                                title="Por favor informe somente os números"
                                 />
                         </div>
 

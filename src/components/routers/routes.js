@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate} from "react-router-dom";
 import HomePage from "../home/home.js";
 import LoginPage from "../login/loginPage";
+import CadastraDiretoria from "../pages_cadastro/cadastraDiretoria.js";
 import CadastraIntegrante from "../pages_cadastro/cadastraIntegrante.js";
 import CadastraMembrosDaDiretoria from "../pages_cadastro/cadastraMembrosDaDiretoria.js";
 import CadastraONG from "../pages_cadastro/cadastraONG.js";
@@ -12,6 +13,8 @@ import Integrantes from "../pages_consulta/integrantes.js";
 import MembrosDaDiretoria from "../pages_consulta/membrosDaDiretoria.js";
 import Ongs from "../pages_consulta/ongs.js";
 import ProtetoresIndependentes from "../pages_consulta/protetoresIndependentes.js";
+import EscolhaDeCadastroConsultarDiretoria from "../pages_edit/escolhaDeCadastroConsultaDiretoria.js";
+import EscolhaDeCadastroConsultarIntegrante from "../pages_edit/escolhaDeCadastroConsultaIntegrante.js";
 import { isAuthenticated } from "../server/authe";
 
 function PrivateRoute({ children }) {
@@ -35,24 +38,33 @@ const Rotas = () => (
                 </PrivateRoute>
             }/>
 
-
-            <Route path="/26cb1fd3-a71a-4c82-93f9-652da031b967" element={
-                <PrivateRoute>
-                    <CadastraMembrosDaDiretoria/>
-                </PrivateRoute>
-            }/>
-
-
-            <Route path="/777a6bf1-75d6-4027-aa00-ecbfd724cf1c" element={
-                <PrivateRoute>
-                    <CadastraIntegrante/>
-                </PrivateRoute>
-            }/>
-
-
             <Route path="/e6851794-1cff-4aea-a1b6-5686a6f2afb6" element={
                 <PrivateRoute>
                    <PermitirAcessoAoSite/>
+                </PrivateRoute>
+            }/>
+
+            <Route path="/9bfff959-74f6-41ea-b37a-ad5007b0cc04" element={
+                <PrivateRoute>
+                   <Ongs/>
+                </PrivateRoute>
+            }/>
+
+            <Route path="/02c19a89-30b6-4ac8-9aee-7cd24e08f73c" element={
+                <PrivateRoute>
+                   <ProtetoresIndependentes/>
+                </PrivateRoute>
+            }/>
+
+            <Route path="/16168235-54d5-45ec-a0bb-97e481dc4b32" element={
+                <PrivateRoute>
+                   <CadastraDiretoria/>
+                </PrivateRoute>
+            }/>
+
+            <Route path="/9aabcd75-a57d-4b46-8598-8d0d6a7e0b78" element={
+                <PrivateRoute>
+                   <CadastraIntegrante/>
                 </PrivateRoute>
             }/>
 
@@ -68,15 +80,16 @@ const Rotas = () => (
                 </PrivateRoute>
             }/>
 
-            <Route path="/9bfff959-74f6-41ea-b37a-ad5007b0cc04" element={
+            <Route path="/26cb1fd3-a71a-4c82-93f9-652da031b967" element={
                 <PrivateRoute>
-                   <Ongs/>
+                    <EscolhaDeCadastroConsultarDiretoria/>
                 </PrivateRoute>
             }/>
 
-            <Route path="/02c19a89-30b6-4ac8-9aee-7cd24e08f73c" element={
+
+            <Route path="/777a6bf1-75d6-4027-aa00-ecbfd724cf1c" element={
                 <PrivateRoute>
-                   <ProtetoresIndependentes/>
+                    <EscolhaDeCadastroConsultarIntegrante/>
                 </PrivateRoute>
             }/>
 

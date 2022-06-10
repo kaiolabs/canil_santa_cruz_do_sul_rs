@@ -5,13 +5,14 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { supabase } from '../server/supabase.js'
 
-export default function CadastraIntegrante() {
+export default function CadastraDiretoria() {
     const [nome, setNome] = useState("");
     const [cpf, setCpf] = useState("");
     const [rg, setRg] = useState("");
     const [telefone, setTelefone] = useState("");
     const [endereco, setEndereco] = useState("");
     const [email, setEmail] = useState("");
+    const [cargo, setCargo] = useState("");
     
     const handleNomeChange = (e) => {
         setNome(e.target.value);
@@ -34,6 +35,10 @@ export default function CadastraIntegrante() {
 
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
+    }
+
+    const handleCargoChange = (e) => {
+        setCargo(e.target.value);
     }
 
     const messengerError = () => {
@@ -77,15 +82,15 @@ export default function CadastraIntegrante() {
         e.preventDefault();
 
             const { data, error } = await supabase
-                .from('Integrantes')
-                .insert([{nome: nome, cpf: cpf, rg: rg, endereco: endereco, telefone: telefone, email: email.toLowerCase() ,dataCadastro: new Date(), idOrg: localStorage.getItem('idOrg')},])
+                .from('Diretoria')
+                .insert([{nome: nome, cpf: cpf, rg: rg, endereco: endereco, telefone: telefone, email: email.toLowerCase() ,dataCadastro: new Date(), idOrg: localStorage.getItem('idong'), cargo: cargo},])
 
             if (error) {
                 messengerError2();
             }else{
                 messengerSuccess();
                 setTimeout(() => {
-                    localStorage.removeItem('idong');
+                    localStorage.removeItem('idOrg');
                     localStorage.removeItem('nome');
                     window.location.href = "/5872b189-7ede-4e1d-895e-45a966e4c876";
                 }, 2000);
@@ -99,7 +104,7 @@ export default function CadastraIntegrante() {
                 <SimplesNavbar/>
             </div>
             <div className={styles.container}>
-            <h1 className={styles.title}>Cadastra Integrante</h1>
+            <h1 className={styles.title}>Cadastra membro da diretoria</h1>
             <h3 className={styles.subTitle}>({localStorage.getItem('nome')})</h3>
                 <form 
                 className={styles.form}
@@ -178,6 +183,18 @@ export default function CadastraIntegrante() {
                                     value={email}
                                     onChange={handleEmailChange}
                                 />
+                        </div>
+                    </section>
+                    <section>
+                    <div className={styles.input}>
+                            <label>Cargo</label>
+                            <input 
+                                required
+                                type="text"
+                                value={cargo}
+                                onChange={handleCargoChange}
+
+                            />
                         </div>
                     </section>
 
