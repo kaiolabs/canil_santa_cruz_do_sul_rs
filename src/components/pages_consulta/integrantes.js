@@ -5,47 +5,48 @@ import { supabase } from '../server/supabase.js'
 import CardDeInformacoesDiretoria from "../cards/cardDeInformacoesDiretoria";
 
 export default function Integrantes() {
-    const [protetores, setProtetores] = useState([]);
+    const [integrantes, setIntegrantes] = useState([]);
     const [copyOngs, setCopyOngs] = useState([]);
     const [busca, setBusca] = useState("");
     var lista = [];
 
+    useEffect(() => {
+        getIntegrantes();
+    }, [])
 
-    const getProtetores = async () => {
+    const getIntegrantes = async () => {
         const { data: Organizacao, error } = await supabase
             .from('Integrantes')
             .select('*')
-            setProtetores(Organizacao)
 
-            for (let i = 0; i < protetores.length; i++) {
-                if(protetores[i].idOrg == localStorage.getItem('idOrg')){
-                    console.log(protetores[i])
-                    lista.push(protetores[i])
-                    
+            for (let i = 0; i < Organizacao.length; i++) {
+                if(Organizacao[i].idOrg == localStorage.getItem('idOrg')){
+                    lista.push(Organizacao[i])
                 }
             }
+            setIntegrantes(lista)
             setCopyOngs(lista)
+            lista = []
+            
     }
+    
 
-    useEffect(() => {
-        getProtetores();
-    }, [])
-
-    const handleBusca = (e) => {
+    const handleInputBusca = (e) => {
+        e.preventDefault()
         setBusca(e.target.value)
     }
 
     const handleReload = (e) => {
         e.preventDefault()
         setBusca("")
-        setCopyOngs(lista)
+        setCopyOngs(integrantes)
     }
 
-    const buscaProtetores = async(e) => {
+    const buscaIntegrantes = async(e) => {
         e.preventDefault()
 
         if(busca.length > 0){
-            setCopyOngs(protetores.filter(protetor => protetor.nome.toLowerCase().includes(busca.toLowerCase())))
+            setCopyOngs(integrantes.filter(integrante => integrante.nome.toLowerCase().includes(busca.toLowerCase())))
         }
     }
 
@@ -53,7 +54,7 @@ export default function Integrantes() {
         <div>
             <SimplesNavbar/>
             <div>
-                <h1 className={styles.title}>ONGs OSCs</h1>
+                <h1 className={styles.title}>{localStorage.getItem('nome')}</h1>
                 <div className={styles.container}>
                     <div className={styles.busca}>
                         <input 
@@ -61,14 +62,13 @@ export default function Integrantes() {
                             placeholder="Buscar por nome"
                             className={styles.inputDeBusca}
                             value={busca}
-                            onChange={handleBusca}
-
+                            onChange={handleInputBusca}
 
                         />
                         <div className={styles.buttons}>
                             <button 
                                 className={styles.botaoDeBusca}
-                                onClick={buscaProtetores}
+                                onClick={buscaIntegrantes}
                             >Buscar</button>
                             <button 
                                 className={styles.botaoDeBusca}
@@ -77,8 +77,8 @@ export default function Integrantes() {
                         </div>
                     </div>
                     <div className={styles.cards}>
-                        {copyOngs.length > 0 && copyOngs.map(protetor => <CardDeInformacoesDiretoria key={protetor.id} {...protetor}/>)}        
-                        {copyOngs.length === 0 && <h1 className={styles.notValue}>Nenhum protetor independente encontrado</h1>}
+                        {copyOngs.length > 0 && copyOngs.map(integrante => <CardDeInformacoesDiretoria key={integrante.id} {...integrante}/>)}        
+                        {copyOngs.length === 0 && <h1 className={styles.notValue}>Nenhum integrante encontrado</h1>}
                     </div>
                 </div>
             </div>

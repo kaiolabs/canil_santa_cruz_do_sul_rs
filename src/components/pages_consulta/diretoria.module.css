@@ -1,0 +1,101 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.title{
+    text-align: center;
+    font-family: 'Righteous', sans-serif;
+    line-height: 120%;
+    font-size: 2rem;
+    letter-spacing: 0.15rem;
+    color: #834a1c;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.busca{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+
+}
+
+.inputDeBusca{
+    width: 50%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #834a1c;
+    padding-left: 10px;
+}
+
+.botaoDeBusca{
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: #834a1c;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Sarala', sans-serif;
+    letter-spacing: 0.05rem;
+    margin: 0px 0px 0px 20px;
+    color: #fff;
+}
+
+.notValue{
+    text-align: center;
+    font-family: 'Righteous', sans-serif;
+    line-height: 120%;
+    font-size: 2rem;
+    letter-spacing: 0.15rem;
+    color: #834a1c;
+    margin-top: 15%;
+    margin-bottom: 3%;
+    
+}
+
+
+
+@media (min-width: 50px) and (max-width: 850px){
+    .buttons{
+        margin-top: 20px;
+        width: 90%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .botaoDeBusca{
+        width: 110px;
+        font-size: 14px;
+        margin: 0px 17px 0px 17px;
+        color: #fff;
+    }
+
+    .inputDeBusca{
+        width: 90%;
+    }
+
+    .title{
+        font-size: 1.5rem;
+        margin-top: 7%;
+    }
+ }

@@ -67,7 +67,7 @@ export default function CadastraDiretoria() {
     
 
     const messengerSuccess = () => {
-        toast.success('Login bem sucedido', {
+        toast.success('Cadastro bem sucedido', {
             position: "top-center",
             autoClose: 2000,
             hideProgressBar: false,
