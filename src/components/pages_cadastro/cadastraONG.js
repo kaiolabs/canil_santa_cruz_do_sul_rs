@@ -1,6 +1,6 @@
 import { useState } from "react";
 import SimplesNavbar from "../navBar/simplesNavBar";
-import styles from "../pages_cadastro/cadastraProtetorIndependente.module.css";
+import styles from "../pages_cadastro/cadastraONG.module.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { supabase } from '../server/supabase.js'
@@ -151,6 +151,7 @@ export default function CadastraProtetorIndependente() {
             <h1 className={styles.title}>Cadastra ONG/OSC</h1>
                 <form 
                 className={styles.form}
+
                 onSubmit={handleFormSubmit}
                 >
                     <section>

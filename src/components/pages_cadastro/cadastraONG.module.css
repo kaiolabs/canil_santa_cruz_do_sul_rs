@@ -98,3 +98,51 @@
     
 
 }
+
+@media (min-width: 50px) and (max-width: 850px){
+    
+    .title{
+        text-align: center;
+        font-family: 'Righteous', sans-serif;
+        line-height: 120%;
+        font-size: 1.8rem;
+        letter-spacing: 0.15rem;
+        color: #834a1c;
+        margin-top: 7%;
+        margin-bottom: 8%;
+
+    }
+
+    .input input{
+
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 40px;
+        border-radius: 5px;
+        border: none;
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: #000000;
+        background-color: #d4d4d446;
+        border: 2px solid #834a1c;
+        transition: all 0.3s;
+        outline: none;
+        border-radius: 10px;
+        margin: 10px 20px 20px 20px;
+    }
+
+    .input label{
+        font-family: 'Righteous', cursive;
+        font-size: 1rem;
+        letter-spacing: 0.15rem;
+        color: #000000;
+        margin: 10px 20px 10px 25px;
+    }
+
+    .input select{
+        margin-bottom: 20px;
+    }
+    
+    
+ }
