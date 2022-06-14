@@ -87,7 +87,7 @@ export default function CadastraIntegrante() {
                 setTimeout(() => {
                     localStorage.removeItem('idong');
                     localStorage.removeItem('nome');
-                    window.location.href = "/5872b189-7ede-4e1d-895e-45a966e4c876";
+                    window.location.href = "/9bfff959-74f6-41ea-b37a-ad5007b0cc04";
                 }, 2000);
             }
     }
